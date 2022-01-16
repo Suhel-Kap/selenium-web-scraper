@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Congratulations | Cloud Run</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="preload"
+      as="font"
+    />
+    <link href="/static/cloud-run-32-color.png" rel="icon" type="image/png" />
+    <link href="/static/style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <div class="container">
+		<div class="hero">
+			<div style="text-align:center;">
+				<picture>
+					<source srcset="/static/celebration-dark.svg" media="(prefers-color-scheme: dark)">
+					<img src="/static/celebration.svg" alt="A group celebrating" width="427" height="231">
+				</picture>
+			</div>
+
+			<div class="message">
+				<h1>{{message}}</h1>
+			</div>
+		</div>
+	</div>
+
+	<table style="text-align:center;"></table>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.1.2/papaparse.js"></script>
+    <script>
+      function arrayToTable(tableData) {
+        var table = $("<table></table>");
+        $(tableData).each(function (i, rowData) {
+          var row = $("<tr></tr>");
+          $(rowData).each(function (j, cellData) {
+            row.append($("<td>" + cellData + "</td>"));
+          });
+          table.append(row);
+        });
+        return table;
+      }
+
+      $.ajax({
+        type: "GET",
+        url: "../static/trending.csv",
+        success: function (data) {
+          $("body").append(arrayToTable(Papa.parse(data).data));
+        },
+      });
+    </script>
+  </body>
+</html>
