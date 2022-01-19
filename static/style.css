@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
 body {
 	font-family: 'Roboto', sans-serif;
 	font-display: fallback;
@@ -138,9 +139,29 @@ code {
 
 table, th, td {
 	border: 1px solid rgb(255, 255, 255);
+	padding: 12px 15px;
 }
 
 table {
 	border-collapse: collapse;
-	width: 100%;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: 'Roboto Condensed', sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+	background-color: white;
+	color: black;
+
+}
+
+tr {
+	border-bottom: 1px solid #dddddd;
+}
+
+tr:nth-of-type(even) {
+	background-color: #f3f3f3;
+}
+
+tr:last-of-type {
+	border-bottom: 2px solid #009879;
 }
