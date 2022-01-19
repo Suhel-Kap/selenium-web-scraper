@@ -1,6 +1,3 @@
-"""
-A sample Hello World server.
-"""
 import os, json, smtplib
 from dotenv import load_dotenv
 from selenium import webdriver
@@ -19,7 +16,6 @@ from flask import Flask, render_template
 
 load_dotenv()
 
-# pylint: disable=C0103
 app = Flask(__name__)
 
 YOUTUBE_TRENDING_URL = 'https://www.youtube.com/feed/trending'
