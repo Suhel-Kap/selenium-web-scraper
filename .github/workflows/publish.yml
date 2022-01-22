@@ -18,6 +18,7 @@ jobs:
 
     - name: Build the hello-world Docker image
       run: |
-        docker build . --tag ghcr.io/Suhel-Kap/scraper1:latest
-        docker run ghcr.io/Suhel-Kap/scraper1:latest
-        docker push ghcr.io/Suhel-Kap/scraper1:latest
+        docker build . --tag ghcr.io/suhel-kap/scraper1:latest
+        docker run ghcr.io/suhel-kap/scraper1:latest
+        docker push ghcr.io/suhel-kap/scraper1:latest
+        
