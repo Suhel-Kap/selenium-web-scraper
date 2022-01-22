@@ -18,6 +18,6 @@ jobs:
 
     - name: Build the hello-world Docker image
       run: |
-        docker build . --tag ghcr.io/jonashackt/hello-world:latest
-        docker run ghcr.io/Suhel-Kap/gcr.io/mlh-lhd-build-2021/web-scraper:latest
-        docker push ghcr.io/Suhel-Kap/gcr.io/mlh-lhd-build-2021/web-scraper:latest
+        docker build . --tag ghcr.io/Suhel-Kap/scraper1:latest
+        docker run ghcr.io/Suhel-Kap/scraper1:latest
+        docker push ghcr.io/Suhel-Kap/scraper1:latest
