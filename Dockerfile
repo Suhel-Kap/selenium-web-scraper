@@ -3,10 +3,10 @@
 FROM python:3.8
 
 # Install manually all the missing libraries
-RUN apt-get update && apt-get install -y python \
+RUN apt-get update && apt-get install -y python --no-install-recommends \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
- 
+
 # Install Chrome
 RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 RUN dpkg -i google-chrome-stable_current_amd64.deb; apt-get -fy install
