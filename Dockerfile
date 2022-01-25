@@ -3,7 +3,7 @@
 FROM python:3.8
 
 # Install manually all the missing libraries
-RUN apt-get update && apt-get install -y python --no-install-recommends \
+RUN apt-get update && apt-get install -y python \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
 
