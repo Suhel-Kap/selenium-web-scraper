@@ -115,7 +115,7 @@ def hello():
     # print(videos_df)
     videos_df.to_csv('./static/trending.csv',index=None)
 
-    # print("Sending results over email")
+    print("Sending results over email")
     # send_email('trending.csv')
     message="Top 10 Youtube Trending Videos"
 
